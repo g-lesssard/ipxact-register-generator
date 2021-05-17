@@ -5,41 +5,43 @@
     <spirit:name>[% name %]</spirit:name>
     <spirit:version>version</spirit:version>
     <spirit:memoryMaps>
-        <spirit:name>[% name %]</spirit:name>
-        <spirit:addressBlock>
+        <spirit:memoryMap>
             <spirit:name>[% name %]</spirit:name>
-            <spirit:baseAddress>0</spirit:baseAddress>
-            <spirit:range>[% range %]</spirit:range>
-            <spirit:width>32</spirit:width>
+            <spirit:addressBlock>
+                <spirit:name>[% name %]</spirit:name>
+                <spirit:baseAddress>0</spirit:baseAddress>
+                <spirit:range>[% range %]</spirit:range>
+                <spirit:width>32</spirit:width>
 [% FOREACH register = registers -%]
 
-            <spirit:register>
-                <spirit:name>[% register.name %]</spirit:name>
-                [%- IF register.desc %]
-                <spirit:description>[% register.desc %]</spirit:description>
-                [%- END %]
-                <spirit:addressOffset>[% register.offset %]</spirit:addressOffset>
-                <spirit:size>[% register.size %]</spirit:size>
-                [%- IF register.access %]
-                <spirit:access>[% register.access %]</spirit:access>
-                [%- END %]
-                [%- IF register.reset %]
-                <spirit:reset>
-                    <spirit:value>[% register.reset %]</spirit:value>
-                </spirit:reset>
-                [%- END %]
-[% FOREACH field = register.fields -%]
-                <spirit:field>
-                    <spirit:name>[% field.name %]</spirit:name>
-                    [%- IF field.desc %]
-                    <spirit:description>[% field.desc %]</spirit:description>
+                <spirit:register>
+                    <spirit:name>[% register.name %]</spirit:name>
+                    [%- IF register.desc %]
+                    <spirit:description>[% register.desc %]</spirit:description>
                     [%- END %]
-                    <spirit:bitOffset>[% field.offset %]</spirit:bitOffset>
-                    <spirit:bitWidth>[% field.width %]</spirit:bitWidth>
-                </spirit:field>
+                    <spirit:addressOffset>[% register.offset %]</spirit:addressOffset>
+                    <spirit:size>[% register.size %]</spirit:size>
+                    [%- IF register.access %]
+                    <spirit:access>[% register.access %]</spirit:access>
+                    [%- END %]
+                    [%- IF register.reset %]
+                    <spirit:reset>
+                        <spirit:value>[% register.reset %]</spirit:value>
+                    </spirit:reset>
+                    [%- END %]
+[% FOREACH field = register.fields -%]
+                    <spirit:field>
+                        <spirit:name>[% field.name %]</spirit:name>
+                        [%- IF field.desc %]
+                        <spirit:description>[% field.desc %]</spirit:description>
+                        [%- END %]
+                        <spirit:bitOffset>[% field.offset %]</spirit:bitOffset>
+                        <spirit:bitWidth>[% field.width %]</spirit:bitWidth>
+                    </spirit:field>
 [% END -%]
-            </spirit:register>
+                </spirit:register>
 [% END -%]
-        </spirit:addressBlock>
+            </spirit:addressBlock>
+        </spirit:memoryMap>
     </spirit:memoryMaps>
 </spirit:component>
