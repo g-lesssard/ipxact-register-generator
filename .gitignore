@@ -1,3 +1,7 @@
 local/
 test.xml
 cpanfile.snapshot
+Makefile
+MYMETA.json
+.gitignore
+MYMETA.yml
