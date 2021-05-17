@@ -5,7 +5,7 @@
     <spirit:name>[% name %]</spirit:name>
     <spirit:version>version</spirit:version>
     <spirit:memoryMaps>
-        <spirit:name>unusedMemoryMapName</spirit:name>
+        <spirit:name>[% name %]</spirit:name>
         <spirit:addressBlock>
             <spirit:name>[% name %]</spirit:name>
             <spirit:baseAddress>0</spirit:baseAddress>
