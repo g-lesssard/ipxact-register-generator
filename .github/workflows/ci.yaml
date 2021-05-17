@@ -17,4 +17,14 @@ jobs:
     - name: check-functionality
       run: |
         xlsx2ipxact --input sample/input/registers.xlsx --output test_installed.xml
+  verify-docker:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: build-docker
+    - run: |
+      docker build -t ipxact-register-generator ./code/
+    - name: execute-docker
+    - run: |
+      docker run -it --rm --name ipxact-register-generator-runner -v "${PWD}/sample/input/registers:/usr/src/data"
   
