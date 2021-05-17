@@ -1,7 +1,11 @@
+#output from carton
 local/
-test.xml
 cpanfile.snapshot
+
+#output from perl Makefile.PL
 Makefile
 MYMETA.json
-.gitignore
 MYMETA.yml
+
+#Excel autosave
+~$*.xlsx

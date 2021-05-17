@@ -51,7 +51,7 @@
                 <spirit:register>
                     <spirit:name>reg2</spirit:name>
                     <spirit:description>reg desc</spirit:description>
-                    <spirit:addressOffset>8</spirit:addressOffset>
+                    <spirit:addressOffset>1</spirit:addressOffset>
                     <spirit:size>8</spirit:size>
                     <spirit:access>read-only</spirit:access>
                     <spirit:reset>
@@ -86,7 +86,7 @@
                 <spirit:register>
                     <spirit:name>reg3</spirit:name>
                     <spirit:description>reg desc</spirit:description>
-                    <spirit:addressOffset>16</spirit:addressOffset>
+                    <spirit:addressOffset>2</spirit:addressOffset>
                     <spirit:size>8</spirit:size>
                     <spirit:access>read-only</spirit:access>
                     <spirit:reset>
@@ -121,7 +121,7 @@
                 <spirit:register>
                     <spirit:name>reg4</spirit:name>
                     <spirit:description>reg desc</spirit:description>
-                    <spirit:addressOffset>24</spirit:addressOffset>
+                    <spirit:addressOffset>3</spirit:addressOffset>
                     <spirit:size>8</spirit:size>
                     <spirit:access>read-write</spirit:access>
                     <spirit:reset>
@@ -156,7 +156,7 @@
                 <spirit:register>
                     <spirit:name>reg5</spirit:name>
                     <spirit:description>reg desc</spirit:description>
-                    <spirit:addressOffset>32</spirit:addressOffset>
+                    <spirit:addressOffset>4</spirit:addressOffset>
                     <spirit:size>8</spirit:size>
                     <spirit:access>read-only</spirit:access>
                     <spirit:reset>
@@ -191,7 +191,7 @@
                 <spirit:register>
                     <spirit:name>reg6</spirit:name>
                     <spirit:description>reg desc</spirit:description>
-                    <spirit:addressOffset>40</spirit:addressOffset>
+                    <spirit:addressOffset>5</spirit:addressOffset>
                     <spirit:size>8</spirit:size>
                     <spirit:access>read-only</spirit:access>
                     <spirit:reset>
@@ -226,7 +226,7 @@
                 <spirit:register>
                     <spirit:name>reg7</spirit:name>
                     <spirit:description>reg desc</spirit:description>
-                    <spirit:addressOffset>48</spirit:addressOffset>
+                    <spirit:addressOffset>6</spirit:addressOffset>
                     <spirit:size>8</spirit:size>
                     <spirit:access>read-write</spirit:access>
                     <spirit:reset>
@@ -261,7 +261,7 @@
                 <spirit:register>
                     <spirit:name>reg8</spirit:name>
                     <spirit:description>reg desc</spirit:description>
-                    <spirit:addressOffset>56</spirit:addressOffset>
+                    <spirit:addressOffset>7</spirit:addressOffset>
                     <spirit:size>8</spirit:size>
                     <spirit:access>read-only</spirit:access>
                     <spirit:reset>
@@ -296,7 +296,7 @@
                 <spirit:register>
                     <spirit:name>reg9</spirit:name>
                     <spirit:description>reg desc</spirit:description>
-                    <spirit:addressOffset>64</spirit:addressOffset>
+                    <spirit:addressOffset>8</spirit:addressOffset>
                     <spirit:size>8</spirit:size>
                     <spirit:access>read-only</spirit:access>
                     <spirit:reset>
