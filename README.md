@@ -26,6 +26,10 @@ Outputs are generated to besides to input files
 
 To using another input directory, change the `${PWD}/sample/input` part of second command
 
-You can also install the tool itself with the install script. It will install the required scripts under `/usr/local/bin`.
+You can also install the tool itself with the install script. It will install the required scripts under `/usr/local/bin`. You can then run the tool supplying the input and output arguments:
+
+```
+xlsx2ipxact --input <input_file>.xlsx --output <ipxact_output>.xml
+```
 
 Refer to the example in the samples to see usage of the excel file.
