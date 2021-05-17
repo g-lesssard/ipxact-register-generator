@@ -57,7 +57,7 @@ foreach my $row (@rows) {
     if ($row->[0]) {
         # excel column format
         # 0     1       2       3       4       5
-        # name  address                         description
+        # name  address                 access  description
         if($register) {
             #push if we create new register
             push @registers, $register->deref();
@@ -66,12 +66,13 @@ foreach my $row (@rows) {
         $register = new Register(
             $row->[0],
             $row->[5],
-            $row->[1] - $baseAddress
+            $row->[1] - $baseAddress,
+            $row->[4]
         );
     } else {
         # excel column format
         # 0     1       2        3       4       5
-        #       name    range    reset   access  description
+        #       name    range    reset           description
         # range format [end:start]
         validate_field($row);
         my ($offset, $width) = Register::parse_range($row->[2]);
@@ -80,8 +81,7 @@ foreach my $row (@rows) {
             $row->[5],
             $offset,
             $width,
-            $row->[3],
-            $row->[4]
+            $row->[3]
         );
     }
     $i++;
