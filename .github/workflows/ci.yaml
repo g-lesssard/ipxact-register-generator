@@ -16,5 +16,5 @@ jobs:
         . install.sh
     - name: check-functionality
       run: |
-        xlsx2ipxact --input sample/input/reg10.xlsx --output test_installed.xml
+        xlsx2ipxact --input sample/input/registers.xlsx --output test_installed.xml
   
