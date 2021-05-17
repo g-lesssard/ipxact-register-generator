@@ -24,5 +24,5 @@ jobs:
     - name: build-docker
       run: docker build -t ipxact-register-generator ./code/ 
     - name: execute-docker
-      run: docker run -it --rm -v "${PWD}/sample/input/:/usr/src/data" ipxact-register-generator
+      run: docker run --rm -v "${PWD}/sample/input/:/usr/src/data" ipxact-register-generator
   
