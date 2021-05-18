@@ -3,11 +3,12 @@ use List::Util qw(min);
 
 sub new {
     my $class = shift;
-    my ($name, $desc, $offset) = @_;
+    my ($name, $desc, $offset, $access) = @_;
     my $self = {
         name => $name,
         desc => $desc,
         offset => $offset,
+        access => access_type($access),
         size => 0,
         reset => 0,
         fields => [],
@@ -23,8 +24,7 @@ sub add_field {
         name => $name,
         desc => $desc,
         offset => $offset,
-        width => $width,,
-        access => access_type($access)
+        width => $width        
     };
     $self->update_reset(normalize_reset($reset), $offset);
     $self->update_size($width);

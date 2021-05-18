@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  verify-install:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: run-script
+      run: |
+        . install.sh
+    - name: check-functionality
+      run: |
+        xlsx2ipxact --input sample/input/registers.xlsx --output test_installed.xml
+  verify-docker:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: build-docker
+      run: docker build -t ipxact-register-generator ./code/ 
+    - name: execute-docker
+      run: docker run --rm -v "${PWD}/sample/input/:/usr/src/data" ipxact-register-generator
+  
