@@ -19,7 +19,7 @@ Clone repo and run following commands
 
 ```
 docker build -t ipxact-register-generator ./code/
-docker run -it --rm --name ipxact-register-generator-runner -v "${PWD}/sample/input:/usr/src/data" ipxact-register-generator
+docker run --rm --name ipxact-register-generator-runner -v "${PWD}/sample/input:/usr/src/data" ipxact-register-generator
 ```
 
 Outputs are generated to besides to input files
